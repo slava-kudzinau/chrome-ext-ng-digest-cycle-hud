@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digest Cycles HUD Extension Options</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #status {
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<label>
+    <input type="number" id="top_watches_num" min="10" max="100">
+    Number of top watches to display.
+</label>
+<label>
+    <input type="number" id="digest_cycle_num" min="5" max="100">
+    Number of digest cycles to capture.
+</label>
+<label>
+    <input type="checkbox" id="log_stats">
+    Log digest cycle stat to console.
+</label>
+<button id="save">Save</button>
+
+<div id="status"></div>
+
+
+<script src="options.js"></script>
+</body>
+</html>

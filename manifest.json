@@ -1,0 +1,25 @@
+{
+  "name": "Digest Cycle HUD",
+  "version": "0.1.2",
+  "manifest_version": 2,
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    "digest-hud.js"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["replace.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["inject-hud.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
